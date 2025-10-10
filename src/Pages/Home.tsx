@@ -255,7 +255,7 @@ export default function Home() {
         <h2 className="inline-block text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-primary-300 via-primary-200 to-primary-50 bg-clip-text text-violet-500 dark:text-blue-400 drop-shadow-[0_0_14px_rgba(59,130,246,0.25)] relative after:absolute after:bottom-[-12px] after:left-0 after:w-full after:h-[6px] after:bg-violet-500 dark:after:bg-blue-400 after:rounded-md">My Projects</h2>
 
         <div className="mx-auto mt-3 h-1 w-24 rounded-full bg-gradient-to-r from-primary-600 to-primary-400 shadow-[0_0_20px_rgba(59,130,246,0.6)]"></div>
-        <p className="mx-auto mt-3 max-w-2xl text-black dark:text-white">Selected works focused on speed, accessibility, and clean UX.</p></div>
+        <p className="mx-auto mt-3 max-w-2xl text-black dark:text-white">Selected Projects focused on Performance, accessibility, responsive and clean UX.</p></div>
         <div className="flex flex-wrap justify-center gap-3 mb-10 *:cursor-pointer">
           <button className={`px-4 py-2 all rounded-full border transition-all duration-300  text-white ${activeTab === 'all' ? 'bg-black dark:bg-blue-400' : 'bg-gray-600/50 text-black/80'} border-gray-800/50 hover:bg-black dark:hover:bg-blue-500`} onClick={() => setActiveTab('all')}>All</button>
           <button className={`px-4 py-2 css&html rounded-full border transition-all duration-300 ${activeTab === 'css&html' ? 'bg-black dark:bg-blue-400' : 'bg-gray-600/50'} text-white border-gray-800/50 hover:bg-black dark:hover:bg-blue-500 hover:text-white`} onClick={() => setActiveTab('css&html')}>CSS &amp; HTML</button>
@@ -425,7 +425,7 @@ export default function Home() {
                                           </div>
                                          </div>
           </div>
-        <div className="mt-8 text-center text-xs text-black/80 dark:text-white">* More projects available upon request.</div>
+        <div className="mt-8 text-center text-xs text-black/80 dark:text-white">* More projects available upon demand.</div>
         </div>
 
         {/* Contact */}
