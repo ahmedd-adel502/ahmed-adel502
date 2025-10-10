@@ -147,7 +147,7 @@ export default function Home() {
               <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
               <FontAwesomeIcon className="text-orange-500 text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faHtml5} />
               <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">HTML</h3>
-            <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[85%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+            <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[80%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
             </div>
           </div>
 
@@ -155,7 +155,7 @@ export default function Home() {
             <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
             <FontAwesomeIcon className="text-blue-500 text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faCss} />
             <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">CSS</h3>
-            <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[85%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+            <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[80%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
           </div>
           </div>
 
@@ -163,7 +163,7 @@ export default function Home() {
                 <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
                 <FontAwesomeIcon className="text-yellow-500 text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faJs} />
                 <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">Js</h3>
-              <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[85%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+              <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[80%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
               </div>
           </div>
 
@@ -171,7 +171,7 @@ export default function Home() {
             <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
             <FontAwesomeIcon className="text-violet-500 text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faBootstrap} />
             <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">Bootstrap</h3>
-          <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[85%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+          <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[80%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
           </div>
           </div>
 
@@ -179,7 +179,7 @@ export default function Home() {
               <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
               <FontAwesomeIcon className="text-sky-500 text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faReact} />
               <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">React.js</h3>
-            <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[85%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+            <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[80%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
             </div>
           </div>
 
@@ -187,7 +187,7 @@ export default function Home() {
                 <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
                 <img src={tailwindIcon} alt="tailwind css" className="w-12 h-12 absolute left-2 top-1/2 -translate-y-1/2" />
                 <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">Tailwind.CSS</h3>
-              <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[85%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+              <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[80%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
               </div>
           </div>
 
@@ -195,7 +195,7 @@ export default function Home() {
               <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
             <img src={nextIcon} alt="next js" className="w-12 h-12 absolute left-2 top-1/2 -translate-y-1/2" />
             <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">Next.js</h3>
-          <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[85%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+          <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[80%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
           </div>
           </div>
 
@@ -219,7 +219,7 @@ export default function Home() {
             <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
             <FontAwesomeIcon className="text-blue-500 text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faShareNodes} />
             <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">Rest APIs</h3>
-          <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[85%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+          <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[80%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
           </div>
           </div>
 
@@ -227,7 +227,7 @@ export default function Home() {
              <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
             <FontAwesomeIcon className="text-orange-400 text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faMobile} />
             <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1 text-nowrap">Responsive Design</h3>
-          <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[85%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+          <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[80%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
           </div>
          </div>
 
@@ -236,7 +236,7 @@ export default function Home() {
               <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
             <img src={typeScript} alt="typescript" className="w-12 h-12 absolute left-2 top-1/2 -translate-y-1/2" />
             <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">TypeScript</h3>
-          <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[85%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+          <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[80%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
           </div>
           </div>
 
@@ -244,7 +244,7 @@ export default function Home() {
             <div className="skill-card hover:scale-105 col-span-1 col-start-2 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
             <FontAwesomeIcon className="text-white text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faGithub} />
             <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">Git & Github</h3>
-          <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[85%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div></div>
+          <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[80%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div></div>
         </div>
           </div>
       </div>
