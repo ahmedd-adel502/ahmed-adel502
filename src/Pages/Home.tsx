@@ -432,7 +432,7 @@ export default function Home() {
         <div id="contact">
           <div className="container mx-auto min-h-[70vh] py-20 px-6">
             <div className="flex flex-col items-center justify-center dark:text-white">
-                <div id="contact-me" className={`border-2 border-violet-500 bg-[url('llleaves.svg')] dark:bg-[url('leaves2.svg')] bg-no-repeat bg-contain bg-center dark:border-blue-400 rounded-md p-5  backdrop-blur-[30px] shadow-lg xl:w-[50%]`}>
+                <div id="contact-me" className={`border-2 border-violet-500 bg-[url('/llleaves.svg')] dark:bg-[url('/leaves2.svg')] bg-no-repeat bg-contain bg-center dark:border-blue-400 rounded-md p-5  backdrop-blur-[30px] shadow-lg xl:w-[50%]`}>
                     <h2 className="text-3xl font-bold mb-4 text-center text-black/80 dark:text-white">Get in Touch</h2>
                     <p className="mb-6 text-center text-black/70 dark:text-white/90">I'm open to opportunities and collaborations. Feel free to reach out!</p>
                     <div className="flex flex-col ">
