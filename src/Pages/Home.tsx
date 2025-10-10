@@ -86,10 +86,11 @@ export default function Home() {
 
   return <>
      {/* Main */}
-    <div className="stars" id="stars"></div>
+    <div className="stars dark:hidden" id="stars"></div>
+    <div className="gridshapes hidden dark:block" id="gridshapes"></div>
     <div className="bg-gray-500/50 dark:bg-black/95 main z-10 relative">
-      <div className="container mx-auto text-white py-25 flex items-center justify-around min-h-screen" id="home">
-        <div className="flex flex-col gap-2 space-y-5 bg-gray-800 p-5 rounded-lg shadow-lg w-[50%] home-content translate-x-[-1200px] transition-transform duration-700">
+      <div className="container mx-auto text-white py-35 lg:py-25 lg:flex lg:items-center lg:justify-around min-h-[70%] lg:min-h-screen" id="home">
+        <div className="flex flex-col gap-2 space-y-5 bg-gray-800 p-5 rounded-lg shadow-lg lg:w-[50%] w-[90%] mx-auto lg:mx-0 home-content translate-x-[-1200px] transition-transform duration-700">
           <div className="space-y-2">
             <span className="font-bold">Hi , it's Me</span>
             <h1 className="text-3xl font-bold">I'm <strong className="text-violet-500 dark:text-blue-400">Ahmed</strong> Adel</h1>
@@ -105,20 +106,20 @@ export default function Home() {
               <button onClick={() => window.location.href="#contact"} className="btn flex-grow-1 cursor-pointer bg-violet-600 border-2 border-violet-600 hover:bg-violet-700 dark:bg-blue-400 dark:border-blue-400 dark:hover:bg-blue-500 dark:hover:border-blue-500 drop-shadow-[0_0_50px_violet] dark:drop-shadow-[0_0_50px_skyblue]">Contact Me</button>
             </div>
         </div>
-        <div className="relative image translate-x-[1200px] transition-transform duration-700">
+        <div className="relative image translate-x-[1200px] transition-transform duration-700 w-full lg:w-[50%] mx-auto lg:mx-0 mb-10 lg:mb-0 flex justify-center mt-6 lg:mt-0">
           <img src={profileImg} alt="profile image" className="w-110 h-110 object-cover rounded-full border-4 border-violet-500 dark:border-blue-400 hover:drop-shadow-[0_0_50px_violet] dark:hover:drop-shadow-[0_0_50px_skyblue] transition-shadow duration-300"/>
         </div>
       </div>
 
       {/* about */}
-      <div className="container mx-auto text-white py-25 flex items-center justify-around min-h-screen" id="about">
-          <div data-aos="fade-right" data-aos-delay="400">
+      <div className="container mx-auto text-white py-25 px-5 lg:px-0  flex items-center justify-around min-h-[70%] lg:min-h-screen" id="about">
+          <div data-aos="fade-right" data-aos-delay="400" className="lg:w-[50%]">
             <div className={`bg-gray-800 p-5 rounded-lg shadow-lg transition-all duration-[2000ms] overflow-hidden ${open ? 'max-h-[2000px]' : 'max-h-[80px]'}`}>
               <div className="flex items-center justify-between">
                 <span className='text-lg font-bold inline-block w-fit bg-violet-600 dark:bg-blue-400 p-2 rounded-md'>About Me</span>
-                <span onClick={()=>setOpen(!open)} className="cursor-pointer bg-violet-500 dark:bg-blue-400 p-2 rounded-full h-[50px] w-[50px] flex items-center justify-center animate-bounce"><FontAwesomeIcon className={`text-3xl text-white transition-transform duration-[1000ms] ${open ? 'rotate-180' : ''}`} icon={faArrowDown} /></span>
+                <span onClick={()=>setOpen(!open)} className="cursor-pointer bg-violet-500 dark:bg-blue-400 hover:bg-violet-600 dark:hover:bg-blue-500 transition-colors duration-300 p-2 rounded-full h-[50px] w-[50px] flex items-center justify-center animate-bounce"><FontAwesomeIcon className={`text-3xl text-white transition-transform duration-[1000ms] ${open ? 'rotate-180' : ''}`} icon={faArrowDown} /></span>
               </div>
-                <p className='mt-10 text-lg text-gray-300 max-w-3xl'>Hello! I'm <strong>Ahmed Adel</strong>, a passionate frontend developer with a knack for creating engaging and user-friendly web experiences. With a strong foundation in <strong className='text-orange-400'>HTML</strong>, <strong className='text-blue-400'>CSS</strong>, and <strong className='text-yellow-400'>JavaScript</strong>, I specialize in building responsive and dynamic websites using modern frameworks like <strong className='text-violet-400'>React</strong> and <strong className='text-sky-400'>Next.js</strong>. I love turning complex problems into simple, beautiful, and intuitive designs. When I'm not coding, you can find me exploring the latest tech trends or working on personal projects to sharpen my skills. Let's connect and create something amazing together!</p>
+                <p className='mt-10 lg:text-lg text-gray-300 max-w-3xl text-sm '>Hello! I'm <strong>Ahmed Adel</strong>, a passionate frontend developer with a knack for creating engaging and user-friendly web experiences. With a strong foundation in <strong className='text-orange-400'>HTML</strong>, <strong className='text-blue-400'>CSS</strong>, and <strong className='text-yellow-400'>JavaScript</strong>, I specialize in building responsive and dynamic websites using modern frameworks like <strong className='text-violet-400'>React</strong> and <strong className='text-sky-400'>Next.js</strong>. I love turning complex problems into simple, beautiful, and intuitive designs. When I'm not coding, you can find me exploring the latest tech trends or working on personal projects to sharpen my skills. Let's connect and create something amazing together!</p>
                 <p className='text-xl font-bold mt-5 text-sky-200 flex items-center gap-2'><span className='bg-violet-600 dark:bg-blue-400 size-2 rounded-full inline-block'></span>Certified Diploma in Front-End Web Development from Route IT Training Center</p>
                 <ul className='flex items-center gap-2 text-5xl mt-10 w-[50%] mx-auto justify-center'>
                   <li><FontAwesomeIcon className="text-orange-400 cursor-pointer drop-shadow-[0_0_10px_violet] dark:drop-shadow-[0_0_10px_skyblue] slide-Y " icon={faHtml5} /></li>
@@ -131,7 +132,7 @@ export default function Home() {
            </div>
           </div>
 
-           <div data-aos="fade-left" data-aos-delay="400">
+           <div data-aos="fade-left" data-aos-delay="400" className="relative lg:block hidden">
               <div className="relative">
               <img src={profileImg} alt="profile image" className="w-110 h-110 object-cover rounded-full border-4 border-violet-500 dark:border-blue-400 hover:drop-shadow-[0_0_50px_skyblue] transition-shadow duration-300"/>
             </div>
@@ -139,94 +140,94 @@ export default function Home() {
       </div>
 
       {/* Skills */}
-      <div className="container mx-auto text-white py-25 min-h-screen" id="skills">
+      <div className="container mx-auto text-white py-25 lg:min-h-screen min-h-[70%]" id="skills">
         <h2 className="font-bold text-5xl mx-auto text-violet-500 dark:text-blue-400 w-fit relative after:absolute after:bottom-[-12px] after:left-0 after:w-full after:h-[6px] after:bg-violet-500 dark:after:bg-blue-400 after:rounded-md">My Skills</h2>
-        <div className="grid grid-cols-3 mt-20 gap-10 flex-wrap">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-20 gap-5 lg:gap-10 px-5">
           <div data-aos="fade-up" data-aos-delay="0">
               <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
               <FontAwesomeIcon className="text-orange-500 text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faHtml5} />
-              <h3 className="text-2xl font-bold mb-1">HTML</h3>
-            <div className="absolute bottom-2.5 left-[80px] w-[80%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+              <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">HTML</h3>
+            <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[85%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
             </div>
           </div>
 
           <div data-aos="fade-up" data-aos-delay="100">
             <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
             <FontAwesomeIcon className="text-blue-500 text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faCss} />
-            <h3 className="text-2xl font-bold mb-1">CSS</h3>
-            <div className="absolute bottom-2.5 left-[80px] w-[80%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+            <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">CSS</h3>
+            <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[85%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
           </div>
           </div>
 
           <div data-aos="fade-up" data-aos-delay="200">
                 <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
                 <FontAwesomeIcon className="text-yellow-500 text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faJs} />
-                <h3 className="text-2xl font-bold mb-1">Js</h3>
-              <div className="absolute bottom-2.5 left-[80px] w-[80%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+                <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">Js</h3>
+              <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[85%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
               </div>
           </div>
 
           <div data-aos="fade-up" data-aos-delay="300">
             <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
             <FontAwesomeIcon className="text-violet-500 text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faBootstrap} />
-            <h3 className="text-2xl font-bold mb-1">Bootstrap</h3>
-          <div className="absolute bottom-2.5 left-[80px] w-[80%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+            <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">Bootstrap</h3>
+          <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[85%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
           </div>
           </div>
 
           <div data-aos="fade-up" data-aos-delay="400">
               <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
               <FontAwesomeIcon className="text-sky-500 text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faReact} />
-              <h3 className="text-2xl font-bold mb-1">React.js</h3>
-            <div className="absolute bottom-2.5 left-[80px] w-[80%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+              <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">React.js</h3>
+            <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[85%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
             </div>
           </div>
 
           <div data-aos="fade-up" data-aos-delay="500">
                 <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
                 <img src={tailwindIcon} alt="tailwind css" className="w-12 h-12 absolute left-2 top-1/2 -translate-y-1/2" />
-                <h3 className="text-2xl font-bold mb-1">Tailwind.CSS</h3>
-              <div className="absolute bottom-2.5 left-[80px] w-[80%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+                <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">Tailwind.CSS</h3>
+              <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[85%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
               </div>
           </div>
 
           <div data-aos="fade-up" data-aos-delay="600">
               <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
             <img src={nextIcon} alt="next js" className="w-12 h-12 absolute left-2 top-1/2 -translate-y-1/2" />
-            <h3 className="text-2xl font-bold mb-1">Next.js</h3>
-          <div className="absolute bottom-2.5 left-[80px] w-[80%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+            <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">Next.js</h3>
+          <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[85%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
           </div>
           </div>
 
           <div data-aos="fade-up" data-aos-delay="700">
             <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
             <FontAwesomeIcon className="text-pink-500 text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faSass} />
-            <h3 className="text-2xl font-bold mb-1">Sass</h3>
-          <div className="absolute bottom-2.5 left-[80px] w-[70%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+            <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">Sass</h3>
+          <div className="absolute bottom-2.5 left-[80px] lg:w-[60%] xl:w-[70%] w-[75%] md:w-[70%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
           </div>
           </div>
 
           <div data-aos="fade-up" data-aos-delay="800">
             <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
             <img src={reduxIcon} alt="redux" className="w-12 h-12 absolute left-2 top-1/2 -translate-y-1/2" />
-            <h3 className="text-2xl font-bold mb-1">Redux</h3>
-          <div className="absolute bottom-2.5 left-[80px] w-[75%] h-[10px] bg-violet-600 dark:bg-blue-400  rounded-lg"></div>
+            <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">Redux</h3>
+          <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[70%] w-[80%] md:w-[75%] h-[10px] bg-violet-600 dark:bg-blue-400  rounded-lg"></div>
           </div>
           </div>
 
           <div data-aos="fade-up" data-aos-delay="900">
             <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
             <FontAwesomeIcon className="text-blue-500 text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faShareNodes} />
-            <h3 className="text-2xl font-bold mb-1">Rest APIs</h3>
-          <div className="absolute bottom-2.5 left-[80px] w-[75%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+            <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">Rest APIs</h3>
+          <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[85%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
           </div>
           </div>
 
          <div data-aos="fade-up" data-aos-delay="1000">
              <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
             <FontAwesomeIcon className="text-orange-400 text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faMobile} />
-            <h3 className="text-2xl font-bold mb-1">Responsive Design</h3>
-          <div className="absolute bottom-2.5 left-[80px] w-[80%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+            <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1 text-nowrap">Responsive Design</h3>
+          <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[85%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
           </div>
          </div>
 
@@ -234,16 +235,16 @@ export default function Home() {
 
               <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
             <img src={typeScript} alt="typescript" className="w-12 h-12 absolute left-2 top-1/2 -translate-y-1/2" />
-            <h3 className="text-2xl font-bold mb-1">TypeScript</h3>
-          <div className="absolute bottom-2.5 left-[80px] w-[80%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+            <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">TypeScript</h3>
+          <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[85%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
           </div>
           </div>
 
-          <div data-aos="fade-up" data-aos-delay="1200" className="col-span-1 col-start-2">
+          <div data-aos="fade-up" data-aos-delay="1200" className="col-span-1 lg:col-start-2">
             <div className="skill-card hover:scale-105 col-span-1 col-start-2 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
             <FontAwesomeIcon className="text-white text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faGithub} />
-            <h3 className="text-2xl font-bold mb-1">Git & Github</h3>
-          <div className="absolute bottom-2.5 left-[80px] w-[80%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div></div>
+            <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">Git & Github</h3>
+          <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[85%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div></div>
         </div>
           </div>
       </div>
@@ -430,15 +431,15 @@ export default function Home() {
         {/* Contact */}
         <div id="contact">
           <div className="container mx-auto min-h-[70vh] py-20 px-6">
-            <div className="flex flex-col items-center justify-center">
-                <div className="border-2 border-violet-500 dark:border-blue-400 rounded-md p-5 bg-gradient-to-r from-gray-400 to-violet-200 dark:from-blue-400 dark:to-violet-200 backdrop-blur-md shadow-lg w-[50%]">
-                    <h2 className="text-3xl font-bold mb-4 text-center text-black/80">Get in Touch</h2>
-                    <p className="mb-6 text-center text-black/70">I'm open to opportunities and collaborations. Feel free to reach out!</p>
+            <div className="flex flex-col items-center justify-center dark:text-white">
+                <div id="contact-me" className={`border-2 border-violet-500 bg-[url('../../public/llleaves.svg')] dark:bg-[url('../../public/leaves2.svg')] bg-no-repeat bg-contain bg-center dark:border-blue-400 rounded-md p-5  backdrop-blur-[30px] shadow-lg xl:w-[50%]`}>
+                    <h2 className="text-3xl font-bold mb-4 text-center text-black/80 dark:text-white">Get in Touch</h2>
+                    <p className="mb-6 text-center text-black/70 dark:text-white/90">I'm open to opportunities and collaborations. Feel free to reach out!</p>
                     <div className="flex flex-col ">
-                        <label htmlFor="email" className="text-gray-800">Email</label>
+                        <label htmlFor="email" className="text-gray-800 dark:text-white/90">Email</label>
                         <div className="flex items-center justify-between">
                           <a href="mailto:ahmeddadel502@gmail.com" id="email" className="cursor-pointer w-fit font-bold">ahmeddadel502@gmail.com</a>
-                          <span id="copy" className=" text-black cursor-pointer border-2 border-violet-500 dark:border-blue-400 rounded-md px-2 py-1 hover:bg-violet-500 dark:hover:bg-blue-400 hover:text-white transition-all duration-300" onClick={() =>{
+                          <span id="copy" className=" text-black dark:text-white cursor-pointer border-2 border-violet-500 dark:border-blue-400 rounded-md px-2 py-1 hover:bg-violet-500 dark:hover:bg-blue-400 hover:text-white transition-all duration-300" onClick={() =>{
                             navigator.clipboard.writeText("ahmeddadel502@gmail.com");
                             document.getElementById('copy')!.innerText = 'Copied!';
                             setTimeout(() => {
@@ -448,14 +449,14 @@ export default function Home() {
                         </div>
                     </div>
                      <div className="flex flex-col ">
-                        <label htmlFor="phone" className="text-gray-800">Phone</label>
+                        <label htmlFor="phone" className="text-gray-800 dark:text-white/90">Phone</label>
                         <div className="flex items-center justify-between">
                           <a href="tel:01121989480" id="phone" className="cursor-pointer w-fit font-bold">01121989480</a>
                           <span id="whatsapp" className=" text-white font-bold cursor-pointer bg-green-600 hover:bg-green-700 hover:border-green-700 border-2 border-green-600 rounded-md px-2 py-1" onClick={() => window.open('https://wa.me/01121989480')}><FontAwesomeIcon className="size-5" icon={faWhatsapp} /> WhatsApp</span>
                         </div>
                     </div>
                     <div className="flex flex-col ">
-                        <label htmlFor="location" className="text-gray-800">location</label>
+                        <label htmlFor="location" className="text-gray-800 dark:text-white/90">location</label>
                         <div className="flex items-center justify-between">
                           <span id="location" className=" w-fit font-bold">Cairo, Egypt</span>
                         </div>
