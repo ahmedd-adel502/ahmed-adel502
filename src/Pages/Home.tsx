@@ -1,7 +1,7 @@
 import { faBootstrap, faCss, faCss3, faGithub, faHtml5, faJs, faLinkedin, faReact, faSass, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faArrowDown, faMobile, faShareNodes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useRef, useState } from "react";
+import { use, useEffect, useRef, useState } from "react";
 import Typed from "typed.js";
 import AOS from "aos";
 import "aos/dist/aos.css";
