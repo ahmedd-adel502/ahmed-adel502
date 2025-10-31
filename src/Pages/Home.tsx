@@ -22,6 +22,7 @@ import WeatherApp from "../assets/WeatherApp.png"
 import bookMarker from "../assets/BookMarker.png"
 import FrameWork from "../assets/FrameWork.png"
 import QuotesApp from "../assets/Quotes.png"
+import SkillCard from "../components/SkillCard/SkillCard";
 
 export default function Home() {
 
@@ -83,6 +84,10 @@ export default function Home() {
       
 
       const [open, setOpen] = useState(false);
+      let percent = 0;
+      
+      
+      
 
   return <>
      {/* Main */}
@@ -94,7 +99,7 @@ export default function Home() {
           <div className="space-y-2">
             <span className="font-bold">Hi , it's Me</span>
             <h1 className="text-3xl font-bold">I'm <strong className="text-violet-500 dark:text-blue-400">Ahmed</strong> Adel</h1>
-            <h2 className="text-2xl font-bold">I'm a <span className="text-2xl font-bold text-violet-500 dark:text-blue-400" ref={el}></span></h2>
+            <h2 className="text-2xl font-bold">I'm a <span className="lg:text-2xl text-xl font-bold text-violet-500 dark:text-blue-400" ref={el}></span></h2>
           </div>
             <p className="text-gray-300 max-w-lg">I am a frontend developer with experience in building web applications using modern technologies such as React, Next.js, and Tailwind CSS. I am passionate about creating beautiful and functional user interfaces that provide a great user experience.</p>
             <ul className="flex items-center gap-4  text-5xl">
@@ -106,14 +111,14 @@ export default function Home() {
               <button onClick={() => window.location.href="#contact"} className="btn flex-grow-1 cursor-pointer bg-violet-600 border-2 border-violet-600 hover:bg-violet-700 dark:bg-blue-400 dark:border-blue-400 dark:hover:bg-blue-500 dark:hover:border-blue-500 drop-shadow-[0_0_50px_violet] dark:drop-shadow-[0_0_50px_skyblue]">Contact Me</button>
             </div>
         </div>
-        <div className="relative image translate-x-[1200px] transition-transform duration-700 w-full lg:w-[50%] mx-auto lg:mx-0 mb-10 lg:mb-0 flex justify-center mt-6 lg:mt-0">
-          <img src={profileImg} alt="profile image" className="w-110 h-110 object-cover rounded-full border-4 border-violet-500 dark:border-blue-400 hover:drop-shadow-[0_0_50px_violet] dark:hover:drop-shadow-[0_0_50px_skyblue] transition-shadow duration-300"/>
+        <div className="relative image translate-x-[1200px] transition-transform duration-700 w-full lg:w-[50%] lg:mx-0 mb-10 lg:mb-0 flex justify-center mt-6 lg:mt-0">
+          <img src={profileImg} alt="profile image" className="lg:w-110 lg:h-110 w-80 h-80 object-cover rounded-full border-4 border-violet-500 dark:border-blue-400 hover:drop-shadow-[0_0_50px_violet] dark:hover:drop-shadow-[0_0_50px_skyblue] transition-shadow duration-300"/>
         </div>
       </div>
 
       {/* about */}
       <div className="container mx-auto text-white py-25 px-5 lg:px-0  flex items-center justify-around min-h-[70%] lg:min-h-screen" id="about">
-          <div data-aos="fade-right" data-aos-delay="400" className="lg:w-[50%]">
+          <div data-aos="fade-right" data-aos-delay="400" className="lg:w-[50%] w-full">
             <div className={`bg-gray-800 p-5 rounded-lg shadow-lg transition-all duration-[2000ms] overflow-hidden ${open ? 'max-h-[2000px]' : 'max-h-[80px]'}`}>
               <div className="flex items-center justify-between">
                 <span className='text-lg font-bold inline-block w-fit bg-violet-600 dark:bg-blue-400 p-2 rounded-md'>About Me</span>
@@ -145,17 +150,21 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-20 gap-5 lg:gap-10 px-5">
           <div data-aos="fade-up" data-aos-delay="0">
               <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
-              <FontAwesomeIcon className="text-orange-500 text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faHtml5} />
-              <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">HTML</h3>
-            <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[78%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+              <div className="flex items-center">
+                <FontAwesomeIcon className="text-orange-500 text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faHtml5} />
+                <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">HTML</h3>
+              </div>
+            <SkillCard percent={100} />
             </div>
           </div>
 
           <div data-aos="fade-up" data-aos-delay="100">
             <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
-            <FontAwesomeIcon className="text-blue-500 text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faCss} />
-            <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">CSS</h3>
-            <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[78%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+            <div className="flex items-center">
+              <FontAwesomeIcon className="text-blue-500 text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faCss} />
+              <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">CSS</h3>
+            </div>
+           <SkillCard percent={100} />
           </div>
           </div>
 
@@ -163,7 +172,7 @@ export default function Home() {
                 <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
                 <FontAwesomeIcon className="text-yellow-500 text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faJs} />
                 <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">Js</h3>
-              <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[78%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+              <SkillCard percent={95} />
               </div>
           </div>
 
@@ -171,7 +180,7 @@ export default function Home() {
             <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
             <FontAwesomeIcon className="text-violet-500 text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faBootstrap} />
             <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">Bootstrap</h3>
-          <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[78%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+          <SkillCard percent={100} />
           </div>
           </div>
 
@@ -179,7 +188,7 @@ export default function Home() {
               <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
               <FontAwesomeIcon className="text-sky-500 text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faReact} />
               <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">React.js</h3>
-            <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[78%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+            <SkillCard percent={95} />
             </div>
           </div>
 
@@ -187,7 +196,7 @@ export default function Home() {
                 <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
                 <img src={tailwindIcon} alt="tailwind css" className="w-12 h-12 absolute left-2 top-1/2 -translate-y-1/2" />
                 <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">Tailwind.CSS</h3>
-              <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[78%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+              <SkillCard percent={100} />
               </div>
           </div>
 
@@ -195,7 +204,7 @@ export default function Home() {
               <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
             <img src={nextIcon} alt="next js" className="w-12 h-12 absolute left-2 top-1/2 -translate-y-1/2" />
             <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">Next.js</h3>
-          <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[78%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+          <SkillCard percent={90} />
           </div>
           </div>
 
@@ -203,7 +212,7 @@ export default function Home() {
             <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
             <FontAwesomeIcon className="text-pink-500 text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faSass} />
             <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">Sass</h3>
-          <div className="absolute bottom-2.5 left-[80px] lg:w-[60%] xl:w-[70%] w-[72%] md:w-[70%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+         <SkillCard percent={100} />
           </div>
           </div>
 
@@ -211,7 +220,7 @@ export default function Home() {
             <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
             <img src={reduxIcon} alt="redux" className="w-12 h-12 absolute left-2 top-1/2 -translate-y-1/2" />
             <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">Redux</h3>
-          <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[70%] w-[78%] md:w-[75%] h-[10px] bg-violet-600 dark:bg-blue-400  rounded-lg"></div>
+          <SkillCard percent={85} />
           </div>
           </div>
 
@@ -219,7 +228,7 @@ export default function Home() {
             <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
             <FontAwesomeIcon className="text-blue-500 text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faShareNodes} />
             <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">Rest APIs</h3>
-          <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[78%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+          <SkillCard percent={100} />
           </div>
           </div>
 
@@ -227,7 +236,7 @@ export default function Home() {
              <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
             <FontAwesomeIcon className="text-orange-400 text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faMobile} />
             <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1 text-nowrap">Responsive Design</h3>
-          <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[78%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+          <SkillCard percent={100} />
           </div>
          </div>
 
@@ -236,7 +245,7 @@ export default function Home() {
               <div className="skill-card hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
             <img src={typeScript} alt="typescript" className="w-12 h-12 absolute left-2 top-1/2 -translate-y-1/2" />
             <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">TypeScript</h3>
-          <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[78%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div>
+          <SkillCard percent={90} />
           </div>
           </div>
 
@@ -244,7 +253,7 @@ export default function Home() {
             <div className="skill-card hover:scale-105 col-span-1 col-start-2 bg-gray-800 p-5 rounded-lg shadow-lg hover:drop-shadow-[0_0_10px_black] transition-all duration-200 relative overflow-hidden pl-[80px]">
             <FontAwesomeIcon className="text-white text-5xl absolute left-2 top-1/2 -translate-y-1/2" icon={faGithub} />
             <h3 className="text-2xl lg:text-xl md:text-lg font-bold mb-1">Git & Github</h3>
-          <div className="absolute bottom-2.5 left-[80px] lg:w-[70%] xl:w-[75%] md:w-[75%] w-[78%] h-[10px] bg-violet-600 dark:bg-blue-400 rounded-lg"></div></div>
+          <SkillCard percent={100} /></div>
         </div>
           </div>
       </div>
@@ -435,7 +444,7 @@ export default function Home() {
                 <div id="contact-me" className={`border-2 border-violet-500 bg-[url('/llleaves.svg')] dark:bg-[url('/leaves2.svg')] bg-no-repeat bg-contain bg-center dark:border-blue-400 rounded-md p-5  backdrop-blur-[30px] shadow-lg xl:w-[50%]`}>
                     <h2 className="text-3xl font-bold mb-4 text-center text-black/80 dark:text-white">Get in Touch</h2>
                     <p className="mb-6 text-center text-black/70 dark:text-white/90">I'm open to opportunities and collaborations. Feel free to reach out!</p>
-                    <div className="flex flex-col ">
+                    <div className="flex flex-col text-sm lg:text-base">
                         <label htmlFor="email" className="text-gray-800 dark:text-white/90">Email</label>
                         <div className="flex items-center justify-between">
                           <a href="mailto:ahmeddadel502@gmail.com" id="email" className="cursor-pointer w-fit font-bold">ahmeddadel502@gmail.com</a>
@@ -448,14 +457,14 @@ export default function Home() {
                           } }>Copy</span>
                         </div>
                     </div>
-                     <div className="flex flex-col ">
+                     <div className="flex flex-col text-sm lg:text-base">
                         <label htmlFor="phone" className="text-gray-800 dark:text-white/90">Phone</label>
                         <div className="flex items-center justify-between">
                           <a href="tel:01121989480" id="phone" className="cursor-pointer w-fit font-bold">01121989480</a>
                           <span id="whatsapp" className=" text-white font-bold cursor-pointer bg-green-600 hover:bg-green-700 hover:border-green-700 border-2 border-green-600 rounded-md px-2 py-1" onClick={() => window.open('https://wa.me/01121989480')}><FontAwesomeIcon className="size-5" icon={faWhatsapp} /> WhatsApp</span>
                         </div>
                     </div>
-                    <div className="flex flex-col ">
+                    <div className="flex flex-col text-sm lg:text-base">
                         <label htmlFor="location" className="text-gray-800 dark:text-white/90">location</label>
                         <div className="flex items-center justify-between">
                           <span id="location" className=" w-fit font-bold">Cairo, Egypt</span>
