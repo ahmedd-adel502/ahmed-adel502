@@ -84,7 +84,6 @@ export default function Home() {
       
 
       const [open, setOpen] = useState(false);
-      let percent = 0;
       
       
       
